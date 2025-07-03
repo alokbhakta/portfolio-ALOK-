@@ -10,8 +10,8 @@ import sentB from "./icons/sent-50 black.png";
 import windows from "/src/pages/images/windowsUi.png";
 import findName from "/src/pages/images/FindName.png";
 import Bubbles from "/src/pages/images/BubbulesGame.png";
-import res1 from "/src/pages/images/res1.png";
-import res2 from "/src/pages/images/res2.png";
+import res1 from "/src/pages/images/Res1.png";
+import res2 from "/src/pages/images/Res2.png";
 
 gsap.registerPlugin(ScrollTrigger);
 
