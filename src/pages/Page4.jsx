@@ -7,11 +7,11 @@ import custB from "./icons/customer-50 black.png";
 import bagB from "./icons/briefcase-50 black.png";
 import monitorW from "./icons/monitor-50 white.png";
 import sentB from "./icons/sent-50 black.png";
-import windows from "./images/windowsUi.png";
-import findName from "./images/FindName.png";
-import Bubbles from "./images/BubbulesGame.png";
-import res1 from "./images/res1.png";
-import res2 from "./images/res2.png";
+import windows from "/src/pages/images/windowsUi.png";
+import findName from "/src/pages/images/FindName.png";
+import Bubbles from "/src/pages/images/BubbulesGame.png";
+import res1 from "/src/pages/images/res1.png";
+import res2 from "/src/pages/images/res2.png";
 
 gsap.registerPlugin(ScrollTrigger);
 
