@@ -129,8 +129,8 @@ function Page5({ scrollToSection }) {
         </div>
       </aside>
       {/* left sidebar */}
-                  <div ref={leftsideBar} className="w-[10%]  mt-50 flex md:absolute md:z-[-999]">
-                    <div className="w-full h-[50%] bg-[rgb(245,204,76)] flex flex-col items-center gap-10 pt-8 rounded-2xl p-2">
+                  <div ref={leftsideBar} className="w-[10%] h-[300px] mt-50 flex md:absolute md:z-[-999]">
+                    <div className="w-full bg-[rgb(245,204,76)] flex flex-col items-center justify-around rounded-2xl p-2">
                       <img onClick={() => scrollToSection("home")} src={homeB} alt="Home" />
                       <img onClick={() => scrollToSection("about")} src={custB} alt="Customer" />
                       <img onClick={() => scrollToSection("resume")} src={bagB} alt="Bag" />
@@ -156,7 +156,7 @@ function Page5({ scrollToSection }) {
 
         <p ref={textRef} 
         // ref={paraRef} 
-        className="text-base h-[264px] sm:text-lg md:text-xl">
+        className="text-base h-[275px] sm:text-lg md:text-xl">
           Thank you for visiting my portfolio! I'm actively looking for exciting
           opportunities in frontend development and UI/UX design. If you're a
           recruiter, hiring manager, or someone looking to collaborate on a
@@ -167,7 +167,7 @@ function Page5({ scrollToSection }) {
           meaningful connections.
         </p>
 
-        <h1 className="text-lg sm:text-xl md:text-2xl font-semibold">
+        <h1 className="text-lg pt-5 sm:text-xl md:text-2xl font-semibold">
           You can find me on these platforms:
         </h1>
 

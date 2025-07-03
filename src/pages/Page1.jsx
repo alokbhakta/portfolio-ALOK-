@@ -122,7 +122,7 @@ function Page1({ scrollToSection }) {
           </h2>
         </div>
 
-        <div ref={paraRef} className="w-[383px] h-[114px] max-w-[600px]">
+        <div ref={paraRef} className="w-full h-[114px] max-w-[600px]">
           <p ref={textRef} className="font-serif text-sm md:text-base leading-relaxed">
             Enthusiastic and detail-oriented frontend developer with a strong
             foundation in HTML, CSS, JavaScript and React.js. Passionate about

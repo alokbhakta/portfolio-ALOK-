@@ -143,8 +143,8 @@ function Page4({ scrollToSection }) {
         </div>
       </div>
       {/* left sidebar */}
-                  <div ref={leftsideBar} className="w-[10%]  mt-50 flex md:absolute md:z-[-999]">
-                    <div className="w-full h-[50%] bg-[rgb(245,204,76)] flex flex-col items-center gap-10 pt-8 rounded-2xl p-2">
+                  <div ref={leftsideBar} className="w-[10%] h-[300px] mt-50 flex md:absolute md:z-[-999]">
+                    <div className="w-full bg-[rgb(245,204,76)] flex flex-col items-center justify-around rounded-2xl p-2">
                       <img onClick={() => scrollToSection("home")} src={homeB} alt="Home" />
                       <img onClick={() => scrollToSection("about")} src={custB} alt="Customer" />
                       <img onClick={() => scrollToSection("resume")} src={bagB} alt="Bag" />
