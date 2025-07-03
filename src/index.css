@@ -1,0 +1,12 @@
+@import "tailwindcss";
+@font-face {
+  font-family: "hiThere";
+  src: url(../public/GillSansBold.otf);
+}
+@font-face {
+  font-family: "inline";
+  src: url(../public/inline_bold.otf);
+}
+body {
+  overflow-x: hidden;
+}
