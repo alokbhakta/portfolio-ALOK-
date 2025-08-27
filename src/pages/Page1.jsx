@@ -5,46 +5,63 @@ import { gsap } from "gsap";
 function Page1({ scrollToSection }) {
   const heading1Ref = useRef(null);
   const heading2Ref = useRef(null);
+  const tagdiv = useRef(null);
   const tagRef = useRef(null);
   const paraRef = useRef(null);
   const btnRef = useRef(null);
   const imageRef = useRef(null);
 
   const textRef = useRef(null);
-  useEffect(() => {
-    const text = textRef.current.innerText;
-    let chars = text.split("");
-    let timeline = gsap.timeline({ delay: 2 });
-
-    // Clear content first
-    textRef.current.innerText = "";
-    chars.forEach((char, i) => {
-      timeline.to(textRef.current, {
-        duration: 0.05,
-        onComplete: () => {
-          textRef.current.innerHTML += char;
-        },
-      });
-    });
-  }, []);
-
+ 
   useEffect(() => {
     const runAnimation = () => {
       const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
 
       tl.from(heading1Ref.current, { y: -50, opacity: 0, duration: 1 })
         .from(heading2Ref.current, { y: -50, opacity: 0, duration: 1 }, "-=0.5")
-        .from(tagRef.current, { x: -50, opacity: 0, scale: 0.5, duration: 1 }, "-=0.4")
-        .from(imageRef.current, {
-          opacity: 0,
-          scale: 0.5,
-          x: 100,
-          duration: 1.9,
-          ease: "power4.out",
-        }, "-=0.3")
-        .from(paraRef.current, { y: 30, opacity: 0, duration: 0.6 }, "-=0.2")
-        .from(btnRef.current, { scale: 0.2, opacity: 0, duration: 2, delay: 12.5 }, "-=1");
-        
+        .from(
+          tagdiv.current,
+          { x: -50, opacity: 0, scale: 0.5, duration: 1 },
+          "-=0.4"
+        )
+        .from(
+          imageRef.current,
+          {
+            opacity: 0,
+            scale: 0.5,
+            x: 100,
+            duration: 1.9,
+            ease: "power4.out",
+          },
+          "-=0.3"
+        );
+
+      // Typing Effect for textRef
+      const text =
+        "Enthusiastic Full-Stack Developer with expertise in JavaScript, C++, and modern web technologies. Skilled in building responsive applications using HTML, CSS, Sass, React.js, GSAP, and proficient in backend development with Node.js, Express.js, REST APIs, WebSockets, and authentication (JWT, Passport.js). Experienced with MongoDB, Redis, Git/GitHub, Docker, Kubernetes, Postman, and eager to apply skills to impactful real-world projects while continuously learning the latest trends.";;
+
+      textRef.current.innerText = "";
+
+      text
+        .split("")
+        .forEach((char, i) => {
+          tl.to(
+            {},
+            {
+              duration: 0.01, // typing speed (smaller = faster)
+              onComplete: () => {
+                textRef.current.innerHTML += char;
+              },
+            },
+            "+=0" // keeps typing smooth
+          );
+        })
+
+        tl.from(
+          btnRef.current,
+          { scale: 0.2, opacity: 0, duration: 1 },
+          "=0.2"
+        );
     };
 
     if (document.readyState === "complete") {
@@ -54,6 +71,33 @@ function Page1({ scrollToSection }) {
     }
 
     return () => window.removeEventListener("load", runAnimation);
+  }, []);
+
+  useEffect(() => {
+    const titles = [
+      "Frontend Developer",
+      "Backend Developer",
+      "Full Stack(MERN) Developer",
+    ];
+
+    const tl = gsap.timeline({ repeat: -1 }); // infinite repeat
+
+    titles.forEach((title) => {
+      tl.to(tagRef.current, {
+        opacity: 0,
+        y: -20,
+        duration: 0.5,
+        onComplete: () => {
+          tagRef.current.innerHTML = title; // change text when hidden
+        },
+      })
+        .to(tagRef.current, {
+          opacity: 1,
+          y: 0,
+          duration: 0.5,
+        })
+        .to(tagRef.current, { duration: 1.5 }); // hold before next change
+    });
   }, []);
 
   // Magnet effect
@@ -114,29 +158,35 @@ function Page1({ scrollToSection }) {
         </h1>
 
         <div
-          ref={tagRef}
-          className="w-full max-w-[400px] bg-[#FF6B00] rounded-xl"
+          ref={tagdiv}
+          className="w-full max-w-[320px] bg-[#FF6B00] rounded-xl"
         >
-          <h2 className="font-[hiThere] text-white text-base md:text-lg pl-4 py-2">
-            FRONTEND DEVELOPER & UI/UX
+          <h2 ref={tagRef} className="font-[hiThere] text-white text-xl md:text-xl pl-4 py-2">
+            FULL STACK(MERN) DEVELOPER
           </h2>
         </div>
 
-        <div ref={paraRef} className="w-full h-[114px] max-w-[600px]">
-          <p ref={textRef} className="font-serif text-sm md:text-base leading-relaxed">
-            Enthusiastic and detail-oriented frontend developer with a strong
-            foundation in HTML, CSS, JavaScript and React.js. Passionate about
-            building responsive and user-friendly websites. Eager to apply my
-            skills to real-world projects and continue learning modern web
-            technologies.
+        <div ref={paraRef} className="w-full h-[228px] max-w-[600px]">
+          <p
+            ref={textRef}
+            className="font-serif text-sm md:text-base leading-relaxed"
+          >
+            Enthusiastic Full-Stack Developer with expertise in <b>JavaScript</b>,<b> C++</b>,
+            and modern web technologies. Skilled in building responsive
+            applications using <b>HTML</b>, <b> CSS</b>, <b> Sass</b>, <b> React.js</b>, <b> GSAP</b>, and proficient
+            in backend development with <b>Node.js</b>, <b>Express.js</b>, <b>REST APIs</b>,
+            <b> WebSockets</b>, and <b> Authentication</b> (JWT, Passport.js). Experienced with
+            <b> MongoDB</b>, <b> Redis</b>, <b> Git/GitHub</b>, <b> Docker</b>, <b> Kubernetes</b>, <b> Postman</b>, and eager
+            to apply skills to impactful real-world projects while continuously
+            learning the latest trends.
           </p>
         </div>
 
         <div>
           <button
-          onClick={() => scrollToSection("about")}
+            onClick={() => scrollToSection("about")}
             ref={btnRef}
-            className="bg-yellow-500 px-4 py-2 rounded-2xl text-white font-bold cursor-pointer relative z-10 mt-6"
+            className="bg-yellow-500 px-4 py-2 rounded-2xl text-white font-bold cursor-pointer relative z-10 mt-3"
           >
             MORE ABOUT ME
           </button>

@@ -27,7 +27,7 @@ const SocialLinks = forwardRef((props, ref) => {
   ];
 
   return (
-    <div ref={ref} className="flex gap-6 justify-start mt-6">
+    <div ref={ref} className="flex gap-6 justify-start">
       {socialMedia.map((media, index) => (
         <a
           key={index}

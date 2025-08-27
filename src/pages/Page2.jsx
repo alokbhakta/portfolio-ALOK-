@@ -56,11 +56,7 @@ function Page2({ scrollToSection }) {
           { y: 30, opacity: 0, duration: 0.8 },
           "-=0.5"
         )
-         .from(
-          whatdo.current,
-          { y: 30, opacity: 0, duration: 0.8 },
-          "-=0.5"
-        )
+        .from(whatdo.current, { y: 30, opacity: 0, duration: 0.8 }, "-=0.5")
         .from(
           sectionRefs.current,
           {
@@ -129,13 +125,28 @@ function Page2({ scrollToSection }) {
         </div>
       </div>
       {/* left sidebar */}
-      <div ref={leftsideBar} className="w-[10%] h-[300px] mt-50 flex md:absolute md:z-[-999]">
+      <div
+        ref={leftsideBar}
+        className="w-[10%] h-[300px] mt-50 flex md:absolute md:z-[-999]"
+      >
         <div className="w-full bg-[rgb(245,204,76)] flex flex-col items-center justify-around rounded-2xl p-2">
           <img onClick={() => scrollToSection("home")} src={homeB} alt="Home" />
-          <img onClick={() => scrollToSection("about")} src={custW} alt="Customer" />
+          <img
+            onClick={() => scrollToSection("about")}
+            src={custW}
+            alt="Customer"
+          />
           <img onClick={() => scrollToSection("resume")} src={bagB} alt="Bag" />
-          <img onClick={() => scrollToSection("projects")} src={monitorB} alt="Monitor" />
-          <img onClick={() => scrollToSection("contact")} src={sentB} alt="Send" />
+          <img
+            onClick={() => scrollToSection("projects")}
+            src={monitorB}
+            alt="Monitor"
+          />
+          <img
+            onClick={() => scrollToSection("contact")}
+            src={sentB}
+            alt="Send"
+          />
         </div>
       </div>
 
@@ -150,30 +161,36 @@ function Page2({ scrollToSection }) {
           </h1>
         </div>
 
-        <h2 ref={headline} className="text-base md:text-xl text-center md:text-left">
-          I'm <span className="font-[hiThere] text-[#007BFF]">Alok Kumar Bhakta,</span>{" "}
-          Frontend Developer | Passionate Frontend Developer | Turning Ideas
-          into Responsive Web Experiences
+        <h2
+          ref={headline}
+          className="text-base md:text-xl text-center md:text-left"
+        >
+          I'm{" "}
+          <span className="font-[hiThere] text-[#007BFF]">
+            Alok Kumar Bhakta,
+          </span>{" "}
+          a Full Stack Developer| MERN Enthusiast | Building Scalable,
+          Responsive, and User-Focused Web Applications."
         </h2>
 
         <div className="w-full max-w-[1000px]">
-          <p 
+          <p
             ref={aboutParaRef}
             className="font-serif text-sm md:text-[18px] leading-relaxed"
           >
-            I’m a motivated and detail-oriented frontend developer with a strong
-            foundation in HTML, CSS, JavaScript, and basic React.js. Currently
-            pursuing a B.Tech in Computer Science (GPA: 8.3), I thrive on
-            building responsive, user-friendly web interfaces that blend
-            functionality with clean design. Through interactive projects like
-            web-based games and responsive sites, I’ve honed my skills and
-            creativity. I’m eager to contribute to real-world projects and
-            continuously learn modern web technologies to grow as a professional
-            in the tech industry.
+            I’m a passionate Full-Stack Developer skilled in JavaScript,
+            React.js, Node.js, Express.js, MongoDB, and Redis. I enjoy building
+            responsive and user-friendly web applications with modern tools like
+            Tailwind CSS, GSAP, Docker, and Kubernetes. I have completed my
+            B.Tech in Computer Science with a GPA of 8.48/10 and I’m eager to
+            apply my skills to impactful real-world projects while continuously
+            learning the latest technologies.
           </p>
         </div>
 
-        <h2 ref={whatdo} className="font-[hiThere] text-xl md:text-2xl mt-4">What I Do ?</h2>
+        <h2 ref={whatdo} className="font-[hiThere] text-xl md:text-2xl mt-4">
+          What I Do ?
+        </h2>
 
         <div className="w-full flex flex-wrap gap-6">
           <div ref={addToRefs} className="w-full md:w-[30%]">
@@ -181,34 +198,43 @@ function Page2({ scrollToSection }) {
               1. Develop Responsive Web Interfaces:
             </h1>
             <p className="font-serif">
-              I design and build user-friendly, mobile-first websites using
-              HTML, CSS, JavaScript, and React.js that adapt smoothly across
-              devices.
+              I design and build modern, mobile-first, and user-friendly
+              websites using HTML, CSS, JavaScript, React.js, and Tailwind CSS,
+              ensuring smooth experiences across all devices.
             </p>
           </div>
           <div ref={addToRefs} className="w-full md:w-[30%]">
             <h1 className="font-[hiThere]">
-              2. Create Interactive Web Applications:
+              2. Build Scalable Full-Stack Applications:
             </h1>
             <p className="font-serif">
-              I've built games like Find Your Name and Bubbles Game, showcasing
-              my ability to use logic, DOM manipulation, and event handling to
-              create engaging user experiences.
+              With Node.js, Express.js, MongoDB, and REST APIs, I create robust
+              backend systems, integrate authentication, and ensure seamless
+              communication between client and server.
             </p>
           </div>
           <div ref={addToRefs} className="w-full md:w-[30%]">
             <h1 className="font-[hiThere]">
-              3. Continuously Learn & Apply Modern Tech:
+              3. Create Interactive Web Experiences:
             </h1>
             <p className="font-serif">
-              With knowledge of Tailwind CSS, Sass, and a drive to learn, I'm
-              actively improving my frontend skills and applying them in
-              real-world projects hosted on platforms like GitHub and Netlify.
+              From projects like Find Your Name and Bubbles Game, I demonstrate
+              my ability to apply logic, DOM manipulation, animations (GSAP),
+              and event handling to deliver engaging user experiences.
+            </p>
+          </div>
+          <div ref={addToRefs} className="w-full md:w-[30%]">
+            <h1 className="font-[hiThere]">
+              4. Continuously Learn & Apply Modern Tech:
+            </h1>
+            <p className="font-serif">
+              I actively explore tools like Sass, Redis, Docker, and Kubernetes,
+              while deploying projects on GitHub, Netlify, and Vercel,
+              reflecting my adaptability and eagerness to learn.
             </p>
           </div>
         </div>
       </div>
-      
     </div>
   );
 }
