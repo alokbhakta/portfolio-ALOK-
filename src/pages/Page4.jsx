@@ -194,7 +194,7 @@ function Page4({ scrollToSection }) {
               <div className="flex justify-center mt-2">
                 <button
                   onClick={() => window.open(project.live, "_blank")}
-                  className="bg-yellow-500 px-3 py-1 rounded-lg text-white font-bold"
+                  className="bg-yellow-500 px-3 py-1 rounded-lg text-white font-bold cursor-pointer"
                 >
                   Live Link
                 </button>
