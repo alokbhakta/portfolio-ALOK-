@@ -194,10 +194,10 @@ function Page1({ scrollToSection }) {
       </div>
 
       {/* Right Image */}
-      <div className="w-full md:w-[40%] h-[500px] md:h-screen pr-4 flex items-center justify-center">
+      <div className="w-full md:w-[40%] h-[400px] md:h-screen pr-4 flex items-center justify-center">
         <img
           ref={imageRef}
-          className="rounded-xl object-cover w-[70%] md:w-[90%] max-h-[80vh]"
+          className="rounded-xl object-cover w-[300px] md:w-[500px]"
           src={photo}
           alt="Alok"
         />

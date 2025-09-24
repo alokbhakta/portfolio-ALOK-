@@ -12,6 +12,8 @@ import findName from "/src/pages/images/FindName.png";
 import Bubbles from "/src/pages/images/BubbulesGame.png";
 import res1 from "/src/pages/images/Res1.png";
 import res2 from "/src/pages/images/Res2.png";
+import colGene from "/src/pages/images/ColorGredient.png";
+import Aichat from "/src/pages/images/AiChat.png";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -83,6 +85,18 @@ function Page4({ scrollToSection }) {
   }, []);
 
   const projectData = [
+    {
+      title: "Full Stack Zero-Gpt",
+      img: Aichat,
+      live: "https://zero-gpt-frontend.vercel.app/",
+      github: "https://github.com/alokbhakta/Zero-Gpt-Backend",
+    },
+    {
+      title: "Colour Gradient Generate",
+      img: colGene,
+      live: "https://colour-gradient-generator.netlify.app/",
+      github: "https://github.com/alokbhakta/Generate-Colour-Gradient",
+    },
     {
       title: "Windows 10 Ui/Ux Operating system",
       img: windows,
