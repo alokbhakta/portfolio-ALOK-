@@ -1,4 +1,4 @@
 import imageGen from "./ImageGen.png";
-import imageGallery from "./imageGallery.png";
+import imageGallery from "./ImageGallery.png";
 
 export {imageGen,imageGallery};
