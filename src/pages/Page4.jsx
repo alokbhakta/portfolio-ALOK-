@@ -14,7 +14,7 @@ import res1 from "/src/pages/images/Res1.png";
 import res2 from "/src/pages/images/Res2.png";
 import colGene from "/src/pages/images/ColorGredient.png";
 import Aichat from "/src/pages/images/AiChat.png";
-import { imageGen, imageGallery } from "./images/Images";
+import { imageGen, imageGallery, ytThumbnail } from "./images/Images";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -91,6 +91,12 @@ function Page4({ scrollToSection }) {
       img: Aichat,
       live: "https://zero-gpt-frontend.vercel.app/",
       github: "https://github.com/alokbhakta/Zero-Gpt-Backend",
+    },
+    {
+      title: "YT Thumbnail Download",
+      img: ytThumbnail,
+      live: "https://yt-thumbnail-downloder.netlify.app/",
+      github: "https://github.com/alokbhakta/YT-Thumbnail-Downloader",
     },
     {
       title: "Images Gallery",
